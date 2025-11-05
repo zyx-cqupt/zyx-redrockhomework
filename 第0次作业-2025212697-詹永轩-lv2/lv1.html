@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv1</title>
+    <style>
+        .picture{
+            height:200px;
+        }
+        .box{
+            background-color: pink;
+            width: 120px;
+            height: 100px;
+        } 
+        .t1{
+            width: 300px;
+        }
+        .self{
+            font-size:25px;
+            font-family:kaiti;
+            color: brown;
+        }
+        a:link {
+            text-decoration: none;
+            color: #e31313b6;
+        }
+        a:visited{
+            color: rgb(78, 98, 91);
+        }
+        a:hover{
+              color: brown;
+              text-decoration: underline;
+        }
+        a:active{
+            font:20px kaiti;
+        }
+        
+        #reset:focus{
+            color: rgb(194, 35, 35);
+
+        }
+        #submit:focus{
+             color: rgb(194, 35, 35);
+
+        }
+        table,
+        td{
+            border-collapse: collapse;
+        }
+
+        
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <h2 style="color:darkblue"><i>这是我的二级标题</i></h2>
+    <p style="font-size: larger;">百度一分钟，听人吹牛两小时</p>
+    <h3 style="color:darkblue"><i>这是我的三级标题</i></h3>
+    <p>来欣赏一张美照吧!</p>
+    <img class="picture" src="17509081425694080.jpg" alt="加载失败">
+    <div class="box">我爱红岩网校!我一定要加入红岩前端！</div>
+    <a href="https://www.baidu.com/" target="_blank" ><i>点击我可以跳转到度娘哦</i></a>
+    <ul>
+        <li>我</li>
+        <li>要</li>
+        <li>加</li>
+        <li>入</li>
+        <li>红</li>
+        <li>岩</li>
+        <li>!</li>
+    </ul>
+    <hr>
+    <input  class="t1"type="text" placeholder="我是一个无用的文本框">
+    <input type="submit" value="不管怎么按都没用的按钮">
+    <form action="">
+        <table border="2">
+            <tr width>
+               <th> <label for="username">用户名：</label></th>
+                <td><input type="text" name="usrename" id="username"placeholder="请输入用户名" accesskey="S"></td>
+                 
+            </tr>
+            <tr>
+                <th><label for="password"> 密码：</label></th>
+                <td><input type="password" id="password"  placeholder="请输入密码" maxlength="11" autocomplete="off" ></td>
+            </tr>
+            <tr>
+                <td colspan="2"   align="center">
+                    <input id="submit" type="submit">
+                    <input id="reset" type="reset">
+                </td>    
+            </tr>
+            
+        </table>
+        <p class="self" class="p1">自我简介：</p>
+       <span>性别：</span> 
+        <input type="radio" name="gender" id="nan" value="男" checked="checked">
+         <label for="nan">男</label>
+        <input type="radio" name="gender" id="女" value="女">
+        <label for="nv">女</label>
+     <span> 城市：</span>
+        <select name="city" id="city">
+            <option value="重庆" selected>重庆</option>
+            <option value="上海">上海</option>
+            <option value="杭州">杭州</option>
+            <option value="成都">成都</option>
+            <option value="北京">北京</option>
+        </select><br>
+        <span>爱好:</span>
+        <input type="checkbox" class="hobby" id="sing">
+        <label for="sing">唱歌</label>
+        <input type="checkbox" class="hobby" id="dance">
+         <label for="dance">跳舞</label>
+        <input type="checkbox"class="hobby" id="basketball">
+        <label for="basketball">篮球</label>
+        <input type="checkbox"class="hobby" id="rap">
+        <label for="rap">rap</label>
+        <input type="checkbox"class="hobby" id="sport">
+        <label for="sport">运动</label>
+        <input type="checkbox"class="hobby" id="movie">
+        <label for="movie">看电影</label>
+        <input type="checkbox"class="hobby"id="game">
+        <label for="game">游戏</label>
+        <input type="checkbox"class="hobby" id="kun">
+        <label for="kun">蔡徐坤</label><br>
+        <label for="goal">目标:</label>
+        <textarea name="goal" id="goal" placeholder="我要努力加入web前端!加油!"></textarea>
+        
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+</body>
+</html>
