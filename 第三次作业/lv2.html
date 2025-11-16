@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lv</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+        .card{
+            width: 234px;
+            height: 300px;
+            border: 1px solid black;
+            text-align: center;
+            transition: all .3s;
+
+
+        }
+        .card:hover{
+            box-shadow: 0 10px 20px 5px rgba(29, 33, 34, 0.3);
+            transform:scale(1.1)  rotate(-10deg) ;
+        }
+        .card img{
+            width: 160px;
+            margin-top: 40px;
+        }
+        .card h3{
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 10px;
+            
+        }
+        .desc{
+            margin-top: 10px;
+            white-space:nowrap ;
+            padding:0 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #b0b0b0;
+            
+        }
+        .price span{
+            color: #ff6700;font-size: 14px;
+        }
+        .price del{
+            color: #b0b0b0;
+            margin-left: 10px;
+        }
+        
+
+    </style>
+</head>
+<body>
+     <div class="card">
+        <img src="./OIP-C (4).webp" alt="">
+        <h3>Xiaomi Buds 5</h3>
+        <p class="desc">舒适无感佩戴|高通全链路无损音频|哈曼AudioEFX联合调音</p>
+        <p class="price">
+            <span>659元</span>
+            <del>699元</del>
+        </p>
+
+
+     </div>
+    
+</body>
+</html>
