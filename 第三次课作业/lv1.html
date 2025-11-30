@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //创建一个复用对象函数
+    function person(name,age,gender,hobby){
+      this.name = name
+      this.age = age
+      this.gender = gender
+      this.hobby = hobby
+    }
+    let zs = new person('张三',19,'男','sing')
+    let ls = new person('李四',18,'男','dance')
+    let ww = new person('王五',17,'女','rap')
+    //创建一个复制对象函数
+    function copy(insertObj){
+      let newobj = {}//创建一个空对象
+      for(let k in insertObj){
+        newobj[k] = insertObj[k]//遍历对象并将对象属性赋值给newobj
+      }
+      return newobj
+    }
+    let obj1 = copy(zs)
+    let obj2 = copy(ls)
+    let obj3 = copy(ww)//调用copy()函数
+    let arr = []//创建一个空数组
+    arr.push(obj1,obj2,obj3)
+    console.table(arr)//以表格形式打印
+  
+
+  </script>
+  
+</body>
+</html>
