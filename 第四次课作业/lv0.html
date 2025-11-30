@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let zyx = {
+      name:'zyx',
+      age:19,
+      gender:'male'
+    }//第一种
+    let zyx1 = new Object()
+    zyx1.name = 'zyx'
+    zyx1.age = 19
+    zyx1.gender = 'male'//第二种
+    function zyx2(name,age,gender){
+      this.name = name
+      this.age = age
+      this.gender = gender
+    }//第三种
+    let p =  new zyx2('zyx',19,'male')
+    document.write(p.name)
+    console.log(p)
+
+  </script>
+  
+</body>
+</html>
