@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //forEach遍历先转为二维数组
+    let arr = [[1, [2, 3], 4], [5, [6, 7], 8, 9]]
+    function threeDtoTwoD(arr) {
+      let twoD = []
+      arr.forEach(val => {
+        if (Array.isArray(val)) {
+          val.forEach(subval => {
+            twoD.push(subval)
+          })
+        }
+        else {
+          twoD.push(val)
+        }
+      })
+      return twoD
+    }
+    let twoD = threeDtoTwoD(arr)
+    console.log(twoD)
+  //forEach 遍历在转为1维数组
+    let oneD = []
+    twoD.forEach(val => {
+      if (Array.isArray(val)) {
+        val.forEach(subval => {
+          oneD.push(subval)
+        })
+      }
+      else {
+        oneD.push(val)
+
+      }
+      return oneD
+    })
+    console.log(oneD)
+  </script>
+
+</body>
+
+</html>
