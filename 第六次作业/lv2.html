@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./font_g4uj0v4yj6h/iconfont.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .box {
+      width: 1000px;
+      height: 800px;
+      background-color: #fffffff2;
+      margin: auto;
+    }
+
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      height: 50px;
+
+    }
+
+    .header div {
+      margin-right: 10px;
+      height: 30px;
+      text-align: center;
+      transition: all .1s ease-out;
+
+    }
+
+    .header div:hover {
+      border-bottom: 2px solid red;
+      transform: scale(1.1);
+    }
+
+    .liuyan {
+      position: relative;
+      width: 100%;
+      height: 80px;
+      border: 1px solid rgb(235, 235, 226);
+    }
+
+    #liuyan {
+      width: 100%;
+      height: 100%;
+      font-size: 20px;
+    }
+
+    .liuyan span {
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      color: rgb(182, 180, 176);
+    }
+
+    .fasong {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+    }
+
+    .fasong i {
+      margin-left: 5px;
+      font-size: 20px;
+    }
+
+    .fasong .send {
+      width: 60px;
+      background-color: #fff;
+      border: 1px solid black;
+      border-radius: 30px;
+    }
+
+    .talk {
+      width: 100%;
+    }
+
+    .talk ul {
+      width: 100%;
+    }
+
+    .talk ul .deleteone {
+      width: 100%;
+      height: 30px;
+    }
+
+    .talk ul li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 85px;
+      margin-top: 20px;
+
+    }
+
+    .talk ul li .newtalk {
+      opacity: 0;
+    }
+
+    .talk ul li .shafa {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+
+    .touxiang {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: url(./图片1.png) 70% 70%/cover;
+    }
+
+    .name {
+      position: absolute;
+      top: 10px;
+      left: 70px;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 70px;
+      max-width: 1000px;
+      transform: translate(0, -50%);
+    }
+
+    .time {
+      position: absolute;
+      bottom: 0;
+      max-width: 300px;
+      font-size: 14px;
+    }
+    .chenggong{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100px;
+      height: 40px;
+      transform: translate(-50%,-50%);
+      background-color: #151313;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 20px;
+      transition: all .2s;
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+   <!-- 评论成功按钮 -->
+   <div class="chenggong">
+评论成功
+   </div>
+  <!-- 头部制作 -->
+  <div class="box">
+    <div class="header">
+      <div>歌曲列表</div>
+      <div class="plcount">评论（）</div>
+      <div>收藏者</div>
+    </div>
+    <!-- 留言板 -->
+    <div class="liuyan">
+      <textarea name="liuyan" id="liuyan" placeholder="留下一条有爱的评论吧"></textarea>
+      <span class="fontcount">100</span>
+    </div>
+    <!-- 发送区 -->
+    <div class="fasong">
+      <div class="if">
+        <i class="iconfont icon-jinghao"></i>
+        <i class="iconfont  icon-aite"></i>
+        <i class="iconfont icon-smiling"></i>
+      </div>
+      <button class="send">评论</button>
+    </div>
+    <!-- 评论区 -->
+    <div class="talk">
+      <ul>
+        <li class="deleteone">
+          <span class="newtalk">最新评论(1)</span>
+          <span class="shafa">还没有评论，快来抢沙发~</span>
+        </li>
+        <!-- <li>
+      <div class="touxiang"></div>
+      <span class="name">zyx</span>
+      <span class="time">shijian</span>
+      <span class="content">content</span>
+    <span><i class="iconfont icon-icon-
+"></i>
+    <i class="iconfont icon-pinglun
+"></i></span>
+      
+    </li> -->
+      </ul>
+    </div>
+  </div>
+  <script>
+    //声明一个空数组装数据
+    const arr = JSON.parse(localStorage.getItem('data')) || []
+    //获取元素
+    const plcount = document.querySelector('.plcount')
+    const liuyan = document.querySelector('#liuyan')
+    const fontcount = document.querySelector('.fontcount')
+    const send = document.querySelector('.send')
+    const newtalk = document.querySelector('.newtalk')
+    const shafa = document.querySelector('.shafa')
+    const content = document.querySelector('.content')
+    const time = document.querySelector('.time')
+    const ul = document.querySelector('ul')
+    const deleteone = document.querySelector('.deleteone')
+    render()//每次刷新先渲染一次
+    //渲染评论区
+    function render() {
+      const newArr = arr.map((val, index) => {
+        return `
+   <li>
+      <div class="touxiang"></div>
+      <span class="name">zyx</span>
+      <span class="time">${val.time}</span>
+      <span class="content">${val.content}</span>
+    <span><i class="iconfont icon-icon-
+"></i>
+    <i class="iconfont icon-pinglun
+"></i></span>
+      
+    </li>`
+      })
+      newArr.join('')
+      ul.innerHTML = `
+   <li class = "deleteone">
+      <span class="newtalk">最新评论(${arr.length})</span>
+       <span class="shafa">还没有评论，快来抢沙发~</span>
+    </li> 
+  ${newArr.join('')}`
+      //评论数量渲染
+      plcount.innerHTML = `评论(${arr.length})`
+      const newtalk = document.querySelector('.newtalk')//获取新节点
+      const shafa = document.querySelector('.shafa')//获取新节点
+      newtalk.style.opacity = arr.length !== 0 ? 1 : 0
+      shafa.innerHTML = arr.length !== 0 ?'' :'还没有评论，快来抢沙发~'
+
+
+    }
+    //存入数据模块
+    send.addEventListener('click', function () {
+      if (liuyan.value !== '') {
+        const obj = {
+          content: liuyan.value,
+          time: new Date().toLocaleString()
+        }
+        arr.push(obj)
+          const chenggong = document.querySelector('.chenggong')
+      chenggong.style.opacity = '1'
+      setTimeout(function(){
+      chenggong.style.opacity = '0'
+
+      },1000)
+      }
+      liuyan.value = ''
+      localStorage.setItem('data', JSON.stringify(arr))
+      render()
+    })
+     //留言框字数模块
+    liuyan.addEventListener('input',function(){
+fontcount.innerHTML = liuyan.value.length
+    })
+
+
+  </script>
+
+</body>
+
+</html>
