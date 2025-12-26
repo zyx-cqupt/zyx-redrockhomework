@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .box{
+      margin: auto;
+      width: 600px;
+      height: 400px;
+      border: 1px solid green;
+      background: url(./【哲风壁纸】城市-夕阳\ \(1\).png) no-repeat center/cover;
+
+    }
+    h3{
+      text-align: center;
+      font-weight: 500;
+      font-size: 24px;
+      color: aliceblue;
+    }
+    p{
+      width: 100%;
+      text-indent: 2em;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h3>《记承天寺夜游》</h3>
+    <p></p>
+
+  </div>
+  <script>
+    const text = '元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。庭下如积水空明，水中藻、荇（xìng）交横（héng），盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。'
+   const p = document.querySelector('p')
+   let i = 0
+    let timer = setInterval(() => {
+      if(i < text.length){
+        p.innerHTML += text[i]
+        i++
+      }
+      else{
+        clearInterval(timer)
+      }
+
+
+   },200)
+  </script>
+  
+</body>
+</html>
