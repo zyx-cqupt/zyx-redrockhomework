@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <script>
+  //构建对象函数
+  function person (name,age,gender,area){
+    this.name=name;
+    this.age = age;
+    this.gender = gender;
+    this.area = area;
+    this.fn = function(){
+      document.write('你好,世界！');
+    }
+  }
+  const zyx = new person('zyx',19,'男','重庆');
+  const zyj = new person('zyj',26,'女','武汉');
+  const zyt = new person('zyt',27,'女','广州');
+  console.log(zyx.name);
+  console.log(zyj.age);
+  console.log(zyt.area);
+  zyx.fn();//调用对象方法
+ </script> 
+  
+</body>
+</html>

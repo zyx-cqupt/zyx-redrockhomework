@@ -1,0 +1,1046 @@
+.big {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: #f7f9fc;
+  height: 100%;
+}
+
+/* 1.侧边栏 */
+.aside {
+  width: 15%;
+  height: 100vh;
+  background-color: #f0f3f6;
+  overflow-y: auto;
+}
+
+header {
+  margin: auto;
+  width: 200px;
+
+}
+
+header .logo {
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+
+}
+
+.aside .up {
+  width: 200px;
+  margin: 20px auto;
+  padding: 0;
+
+}
+
+.aside .up li {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  line-height: 40px;
+}
+
+.aside .up li:hover {
+  background-color: #e4e8ec;
+  cursor: pointer;
+}
+
+/* js排他 */
+.asideactive {
+  background-color: #f53c4b !important;
+  color: #ebf0fb;
+}
+
+.aside .up li span {
+  margin-left: 15px;
+  font-size: 16px;
+  color: #99a0ab;
+}
+
+.aside .up li i {
+  font-size: 20px;
+
+}
+
+.aside .up li .icon-ziyuan {
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+.aside .up .mine {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: #99a0ab;
+  font-size: 18px;
+}
+
+.aside .up .shouqi small {
+  color: #99a0ab;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+.aside .up .line {
+  display: block;
+  width: 180px;
+  height: .1px;
+  background-color: #99a0ab;
+}
+
+.aside .up .gedan small {
+  color: #767980;
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.aside .up .gedan .icon-shouqi {
+  margin-left: 15px;
+}
+
+.aside .list {
+  margin: 20px auto 10px;
+  padding: 0;
+  width: 200px;
+
+}
+
+.aside .list li {
+  width: 100%;
+  height: 50px;
+}
+
+.list .image {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.list .image img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+
+}
+
+.list .image .name {
+  display: block;
+  margin-right: 40px;
+  color: #1f2024;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* 2.头部制作 */
+.rightpart {
+  width: 85%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  position: sticky;
+  top: 0px;
+  right: 0;
+  z-index: 2;
+  background-color: #f7f9fc;
+
+
+
+
+}
+
+.head .left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.head .left .icon {
+  width: 35px;
+  height: 40px;
+  margin-right: 10px;
+  border: 1px solid #f1f3f7;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.head .left .icon:hover {
+  background-color: #7175753b;
+}
+
+.head .left .icon i {
+  font-size: 30px;
+  color: #d1d5dc;
+}
+
+.head .left .search {
+  display: flex;
+  justify-content: end;
+  height: 40px;
+  width: 350px;
+  margin-right: 10px;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ebf0fb, #f7eef7);
+
+}
+
+.head .left .search .icon-sousuo {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  font-size: 20px;
+  transform: translateY(-50%);
+}
+
+.head .left .search input {
+  width: 80%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.head .left .search input::placeholder {
+  font-size: 16px;
+}
+
+.head .left .search .searchRecord {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  width: 800px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+
+}
+
+.head .left .search .searchRecord h3 {
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.head .left .search .searchRecord li {
+  margin-bottom: 5px;
+  color: #9fa3ad;
+}
+
+.head .left .search .searchRecord li:hover {
+  background-color: #f2f3f4;
+}
+
+.head .left .search .searchRecord ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 750px;
+  height: 80px;
+}
+
+.head .left .search .searchRecord ul li {
+  font-size: 14px;
+  height: 25px;
+  margin-bottom: 10px;
+  background-color: #f2f3f4;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 8px;
+  margin-left: 10px;
+  color: #9397a2;
+  cursor: pointer;
+}
+
+.head .left .search .searchRecord .hot {
+  margin-left: 20px;
+  width: 700px;
+  height: 250px;
+  background-color: #f8f9f9;
+  border-radius: 10px;
+}
+
+.head .left .search .searchRecord .hot h3 {
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.head .left .search .searchRecord .hot ul {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: start;
+  align-items: center;
+}
+
+.head .left .search .searchRecord .hot ul li {
+  background-color: transparent;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.head .left .search .searchRecord .hot ul li:nth-child(-n+3) {
+  font-size: 16px;
+  color: #111112;
+  font-weight: 550;
+}
+
+
+.head .left .icon1 {
+  width: 35px;
+  height: 40px;
+  margin-right: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  background: linear-gradient(to right, #ebf0fb, #f7eef7);
+}
+
+.head .left .icon1 i {
+  font-size: 30px;
+  color: #858697;
+}
+
+.head .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.head .right .uname {
+  width: 40px;
+  height: 40px;
+  margin-left: 100px;
+  border-radius: 50%;
+  background-color: #ede8e8;
+  overflow: hidden;
+}
+
+.head .right .uname img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.head .right .name {
+  width: 100px;
+  margin-left: 10px;
+  color: #767980;
+}
+
+.head .right .vip {
+  position: relative;
+  width: 110px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-color: #b5b5b5;
+}
+
+.head .right .vip .circle {
+  position: absolute;
+  top: -5px;
+  left: -2px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: #c4c2c2;
+}
+
+.head .right .vip .circle .centercircle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 9px;
+  left: 10px;
+  background-color: #b5b5b5;
+}
+
+.head .right .vip span {
+  margin-left: 25px;
+  font-size: 12px;
+  color: #eeeeee;
+}
+
+.head .icon-a-shili-zhankaizuocezhankaijiantou {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.head .right .icon-a-shili-zhankaizuocezhankaijiantou~i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #727275;
+}
+
+.head .right .icon-clothes+span {
+  display: block;
+  width: 1.5px;
+  height: 25px;
+  background-color: #b4bac3;
+  margin-right: 10px;
+
+}
+
+.head .right .fangda {
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid;
+  border-radius: 4px;
+}
+
+/* 3.精选页面制作 */
+/* 3.1.精选页导航栏制作 */
+.rightpart .bigJingxuan {
+  width: 100%;
+  display: none;
+
+}
+
+.rightpart .nav {
+  position: sticky;
+  width: 100%;
+  height: 50px;
+  top: 86px;
+  z-index: 1;
+  background-color: #f7f9fc;
+
+}
+
+.rightpart .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 400px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.rightpart .nav ul li {
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+
+
+
+}
+
+.rightpart .nav ul li span {
+  display: block;
+  height: 100%;
+  color: #cbced1;
+}
+
+.rightpart .nav ul li .line {
+  width: 20px;
+  height: 2px;
+  margin: -10px auto;
+
+}
+
+/* js排他思想控制变化 */
+.lineactive {
+
+  background-color: #f53c4b;
+}
+
+.navactive {
+  color: black !important;
+  ;
+  font-size: larger;
+  font-weight: 450;
+}
+
+.container {
+  width: 100%;
+}
+
+/* 3.2精选主体制作 */
+.jingxuan {
+  width: 100%;
+
+}
+
+/* 官方歌单 */
+.jingxuan .guanfang {
+  width: 100%;
+  height: 250px;
+  margin: 20px 0;
+}
+
+.jingxuan .guanfang>ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+
+}
+
+.jingxuan .guanfang>ul>li {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: url() no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+}
+
+.jingxuan .guanfang ul li .bofangCount {
+  text-align: end;
+  color: #fff;
+  width: 100%;
+}
+
+.jingxuan .guanfang ul li .bottom {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(15, 16, 16, 0.2);
+  color: #fff;
+}
+
+.jingxuan .guanfang ul li .hoverBox {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  bottom: -90px;
+  transition: all 0.3s ease-in-out;
+}
+
+.jingxuan .guanfang ul li:hover .hoverBox {
+  bottom: 0;
+}
+
+.jingxuan .guanfang ul li .hoverBox .name {
+  font-size: 16px;
+  color: #fff;
+  padding: 5px;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.jingxuan .guanfang ul li .hoverBox ul {
+  padding: 0;
+  margin-top: 10px;
+}
+
+.jingxuan .guanfang ul li .hoverBox ul li {
+  font-size: 14px;
+  color: #e6e0e0;
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.jingxuan .guanfang ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 最新音乐 */
+.jingxuan .newestMusic {
+  width: 100%;
+  height: 250px;
+  margin: 20px 0;
+}
+
+.jingxuan .newestMusic ul {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
+
+.jingxuan .newestMusic ul li {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.jingxuan .newestMusic ul li:hover {
+  background-color: #fff;
+}
+
+.jingxuan .newestMusic ul li .songFengmian {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 60px;
+
+}
+
+.jingxuan .newestMusic ul li .songFengmian i {
+  font-size: 28px;
+  color: #f5f7efab;
+  display: none;
+}
+
+.jingxuan .newestMusic ul li:hover .songFengmian i {
+  display: block;
+}
+
+.jingxuan .newestMusic ul li .songName {
+  font-size: 16px;
+  font-weight: 350;
+  color: #222416ab;
+  height: 60px;
+  width: 200px;
+
+}
+
+.jingxuan .newestMusic ul li .songName .singer {
+  font-size: 14px;
+  font-weight: 300;
+  color: #222416ab;
+}
+
+.jingxuan .newestMusic ul li .tuBiao {
+  display: none;
+}
+
+.jingxuan .newestMusic ul li:hover .tuBiao {
+  display: block;
+}
+
+.jingxuan .newestMusic ul li .tuBiao i {
+  font-size: 22px;
+  color: #222416ab;
+  margin-left: 10px;
+
+}
+
+/* 歌单广场 */
+.ground {
+  width: 100%;
+}
+
+.ground .groundNav {
+  width: 100%;
+  height: 50px;
+}
+
+.ground .groundNav ul {
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  width: 600px;
+  height: 100%;
+}
+
+.ground .groundNav ul li {
+  width: 120px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50px;
+  border: 1.5px solid #eceff2;
+  color: #141415;
+  font-weight: 350;
+  font-size: 15px;
+}
+
+.ground .groundNav ul li:hover {
+  background-color: #f5eaed;
+  color: #fd6c70;
+}
+
+.groundNavActive {
+  background-color: #f5eaed;
+  color: #fd6c70 !important;
+}
+
+.groundActive {
+  background-color: #f5eaed;
+  color: #fd6c70 !important;
+}
+
+.ground .groundNav ul li:nth-last-child(1) {
+  width: 200px;
+}
+
+.ground .groundNav ul li .iconfont {
+  font-size: 12px;
+}
+
+.ground .groundContainer {
+  width: 100%;
+}
+
+.ground .groundContainer .groundRecommend {
+  width: 100%;
+
+}
+
+.ground .groundContainer .groundRecommend h3 {
+  font-size: 20px;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.ground .groundContainer .groundRecommend>ul {
+  padding: 0;
+  width: 100%;
+  height: 250px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+}
+
+.groundContainer .groundRecommend ul li {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: url() no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.groundContainer .groundRecommend ul li .bofangCount {
+  text-align: end;
+  color: #fff;
+  width: 100%;
+}
+
+.groundContainer .groundRecommend ul li .bottom {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(15, 16, 16, 0.2);
+  color: #fff;
+}
+
+.groundContainer .groundRecommend ul li .hoverBox {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  bottom: -90px;
+  transition: all 0.3s ease-in-out;
+}
+
+.groundContainer .groundRecommend ul li:hover .hoverBox {
+  bottom: 0;
+}
+
+.groundContainer .groundRecommend ul li .hoverBox .name {
+  font-size: 16px;
+  color: #fff;
+  padding: 5px;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.groundContainer .groundRecommend ul li .hoverBox ul {
+  padding: 0;
+  margin-top: 10px;
+
+}
+
+.groundContainer .groundRecommend ul li .hoverBox ul li {
+  font-size: 14px;
+  color: #e6e0e0;
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* 歌单广场导航切换页面*/
+
+.ground .groundContainer>ul {
+  padding: 0;
+  width: 100%;
+  height: 250px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.groundContainer>ul li {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: url() no-repeat center center/cover;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.groundContainer>ul li .bofangCount {
+  text-align: end;
+  color: #fff;
+  width: 100%;
+}
+
+.groundContainer>ul li .bottom {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(15, 16, 16, 0.2);
+  color: #fff;
+}
+
+.groundContainer>ul li .hoverBox {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  bottom: -90px;
+  transition: all 0.3s ease-in-out;
+}
+
+.groundContainer>ul li:hover .hoverBox {
+  bottom: 0;
+}
+
+.groundContainer>ul li .hoverBox .name {
+  font-size: 16px;
+  color: #fff;
+  padding: 5px;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.groundContainer .groundRecommend ul li .hoverBox ul {
+  padding: 0;
+  margin-top: 10px;
+}
+
+.groundContainer>ul li .hoverBox ul li {
+  font-size: 14px;
+  color: #e6e0e0;
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+/* 排行榜 */
+.container .ranking {
+  width: 100%;
+}
+
+.container .ranking h3 {
+  font-size: 20px;
+  margin: 20px 0;
+  font-weight: 400;
+  width: 100%;
+  color: #737988;
+}
+
+.container .ranking ul {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.container .ranking ul li {
+  width: 200px;
+  height: 200px;
+  background-color: #6394c3;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #fcfcfd;
+
+}
+
+/* 4 推荐页面制作 */
+.rightpart .bigRecommend {
+  width: 100%;
+  display: none;
+}
+
+/* 4.1顶部卡片栏 */
+.bigRecommend .cards {
+  width: 100%;
+  height: 200px;
+}
+
+.bigRecommend .cards ul {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bigRecommend .cards ul li {
+  width: 140px;
+  height: 100%;
+  line-height: 200px;
+
+  background-color: #be1d1d;
+  border-radius: 10px;
+}
+
+/* 4.2推荐歌单 */
+.bigRecommend .recommendList h3 {
+  margin-top: 20px;
+}
+
+.bigRecommend .recommendList ul {
+  margin-top: 20px;
+  padding: 0;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bigRecommend .recommendList ul li {
+  width: 140px;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* 4.3精选活动 */
+.bigRecommend .activity h3 {
+  margin-top: 20px;
+}
+
+.bigRecommend .activity .lunboContainer {
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  overflow: hidden;
+  margin: 20px 0;
+
+}
+
+.bigRecommend .activity .lunboContainer ul {
+  padding: 0;
+  width: 200%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.bigRecommend .activity .lunboContainer ul li {
+  width: 25%;
+  height: 100%;
+  background-color: #9e3636;
+  border-radius: 10px;
+  background: url(./images/封面.png) center/cover;
+  flex-shrink: 0;
+}
+
+/* 4.3红心歌曲和相似推荐 */
+.bigRecommend .heartSong ul {
+  margin-top: 20px;
+  padding: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}

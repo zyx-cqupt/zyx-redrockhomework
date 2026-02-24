@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <div>
+        <b>请选择您的爱好</b>
+        <br />
+    </div>
+    <div id="divlist">
+        <input type="checkbox" value="内卷">内卷
+        <input type="checkbox" value="疯狂内卷">疯狂内卷
+        <input type="checkbox" value="拼命内卷">拼命内卷
+        <input type="checkbox" value="使劲内卷">使劲内卷
+        <br />
+        <input type="button" value="全选">
+        <input type="button" value="全不选">
+        <input type="button" value="反选">
+    </div>
+    <script>
+      //获取元素
+      const allSelect = document.querySelector('#divlist input:nth-child(6)')
+      const allSelectNot = allSelect.nextElementSibling
+      const inverseSelec = allSelectNot.nextElementSibling
+      //全选模块
+      const selection = document.querySelectorAll('#divlist input')
+      allSelect.addEventListener('click',function(){
+        selection.forEach(val =>{
+          val.checked = true
+        })
+
+      })
+      //全不选模块
+      allSelectNot.addEventListener('click',function(){
+        selection.forEach(val  =>{
+          val.checked = false
+        })
+      })
+      //反选模块
+      inverseSelec.addEventListener('click',function(){
+        selection.forEach(val => {
+         val.checked = val.checked === true ? false : true
+        })
+      })
+    </script>
+
+</body>
+</html>

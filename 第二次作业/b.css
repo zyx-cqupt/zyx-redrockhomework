@@ -1,0 +1,9 @@
+div{
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle at center,blue,green);
+    border: 1px solid black;
+    text-align: center;
+    line-height: 200px;
+
+}

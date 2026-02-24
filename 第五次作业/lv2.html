@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  var name = 'window'//全局变量，挂于window
+  function Person(name) {
+    this.name = name
+    this.foo1 = function () {
+      console.log(this.name)
+    }
+    this.foo2 = () => console.log(this.name)
+    this.foo3 = function () {
+      return function () {
+        console.log(this.name)
+      }
+    }
+    this.foo4 = function () {
+      return () => {
+        console.log(this.name)
+      }
+    }
+  }
+  
+  var person1 = new Person('person1')
+  var person2 = new Person('person2')
+  
+  person1.foo1() //this指向调用者,结果为person1
+  person1.foo1.call(person2) //call改变指向，结果为person2
+  
+  person1.foo2()//箭头函数没有自己的this,继承上下文，结果为person1
+  person1.foo2.call(person2) //箭头函数无法通过call/apply//bind改变this指向，结果为person1
+  
+  person1.foo3()() //foo3返回一个函数，普通函数为window的方法，所以name为全局变量window
+  person1.foo3.call(person2)() //返回的仍然为普通函数仍然指向window
+  person1.foo3().call(person2) //返回的普通函数的this的指向转变为person2
+  
+  person1.foo4()() //返回的箭头函数，this继承foo4执行时的this结果为person1
+  person1.foo4.call(person2)() //foo4的指向被修改为person2,结果为erson2
+  person1.foo4().call(person2) //返回的箭头函数无法修改指向，结果为person1
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let arr = [[1, [2, 3], 4], [5, [6, 7], 8, 9]]
+    function fn(arr){
+     const a = arr.reduce((newarr = [],val) => {
+      return newarr.concat(val)//concat 只拉平一层
+     },[])
+     return a
+    }
+       let twoD = fn(arr)
+    console.log(twoD)
+    let oneD = fn(twoD)//需要再次调用将二维转为一维数组
+    console.log(oneD)
+  </script>
+</body>
+
+</html>
