@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+
+  async function foo() {
+  console.log("start");
+  await bar();
+  console.log("end");
+}
+
+async function bar() {
+  console.log("bar");
+}
+
+console.log(1);//1.优先执行同步任务，先打印1
+
+setTimeout(() => {
+  console.log("time");//6.执行宏任务下打印time
+});
+
+foo();//2.执行函数打印start，并调用函数bar，打印bar，接着打印end
+
+new Promise((resolve) => {
+  console.log("p1");//3.同步任务打印p1
+  resolve();
+}).then(() => {
+  console.log("p2");//5.执行微任务下的打印p2
+});
+
+console.log(2);//4.同步任务打印2
+
+</script>
+</html>

@@ -524,13 +524,14 @@ dataObtain('recommend/resource')
       val.innerHTML = ''
     })
   })
+  //banner
 let currentIndex = 0
 let bannerLis = []
 let bannerUl = null
 
 dataObtain('banner')
   .then(data => {
-    console.log(data)
+   // console.log(data)
     bannerLis = document.querySelectorAll('.lunboContainer ul li')
     bannerUl = document.querySelector('.lunboContainer ul')
 
