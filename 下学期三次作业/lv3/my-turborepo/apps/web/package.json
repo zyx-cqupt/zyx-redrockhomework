@@ -1,0 +1,9 @@
+{
+  "name": "web",
+  "dependencies": {
+    "ui": "workspace:*"
+  },
+  "scripts": {
+    "lint": "echo lint"
+  }
+}

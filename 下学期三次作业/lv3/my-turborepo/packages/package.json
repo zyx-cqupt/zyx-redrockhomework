@@ -1,0 +1,7 @@
+{
+  "name": "ui",
+  "exports": "./index.js",
+  "scripts": {
+    "lint": "echo lint"
+  }
+}

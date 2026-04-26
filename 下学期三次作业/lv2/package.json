@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.2.1",
+    "globals": "^17.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint-staged": "lint-staged",
+    "test": "vitest",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "vitest": "^4.1.5"
+  }
+}

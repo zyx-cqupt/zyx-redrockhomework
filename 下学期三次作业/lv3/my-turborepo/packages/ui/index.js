@@ -1,0 +1,1 @@
+export const btn = "公共按钮组件";
